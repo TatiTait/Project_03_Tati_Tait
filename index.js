@@ -67,15 +67,10 @@ app.post('/users', (req, res) => {
 })
 
 
-
-
-
 // For invalid routes
 app.get('*', (req, res) => {
     res.send('404! This is an invalid URL.');
   });
-
-
 
 
 app.listen(PORT, () => {
