@@ -44,7 +44,7 @@ router.get("/users/:id/schedules", (req, res) => {
     })
 })
 
-//Add new user in and return updated list of users, password encrypted 
+//Add new user, password encrypted 
 
 router.get("/users/new", (req, res) => {
     res.render("pages/new-user", {
@@ -64,7 +64,7 @@ router.post('/users', (req, res) => {
     res.redirect('/users')
 })
 
-//Add new schedule for a user and return updated info
+//Add new schedule
 
 router.get("/schedules/new", (req, res) => {
     res.render("./pages/schedules-form")
