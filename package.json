@@ -4,6 +4,9 @@
   "description": "\"first app\"",
   "main": "index.js",
   "scripts": {
+    "create-db": "psql -U postgres -f sql/create-db.sql",
+    "create-table": "psql -U postgres -d mr_coffee -f sql/create-table.sql",
+    "seed-table": "psql -U postgres -d mr_coffee -f sql/seed-table.sql",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,10 +20,10 @@
   },
   "homepage": "https://github.com/TatiTait/project3a#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.1"
+    "express-ejs-layouts": "^2.5.1",
+    "pg-promise": "^10.11.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
