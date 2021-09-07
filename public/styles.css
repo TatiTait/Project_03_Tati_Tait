@@ -7,7 +7,6 @@
     --error-color: #ee3b3b; 
     --correct-color: #43d680;
     --font: 'Open sans', sans-serif;
-    --font-size: 2rem;
 }
 
 *, *::before, *::after {
@@ -18,48 +17,53 @@
 
 
 body {
-    background-color: var(--second-color);
-    margin: 0 10% 0 10%;
+    background-color: var(--background-color);
 }
 
+main {
+    margin: 0 10% 0 10%;
+
+}
 p {
     color: var(--text-color);
-    padding: 2rem;
+    padding: 10px;
 }
 
 h1 {
     color: var(--text-color);
     font-size: 25px;
-    padding: 2rem;
+    padding: 25px;
 }
 
 nav {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     height: 100px;
     justify-content: space-between;
     background-color: #6A7B8B;
-
 }
 
-.nav logo-nav {
-    height: 5rem;
+.logo-nav {
+    height: 60px;
     width: auto;
-    padding: 1rem;
-    padding-left: 3rem;
+    padding: 10px 0 0 20px;
+}
+
+.container img {
+    height: 200px;
+    padding: 20px 0;
 }
 
 nav ul {
-    text-align: right;
-    color: var(--second-text-color);
+    text-align: center;
     list-style: none;
-    padding-right: 1rem;
-    display: contents;
+    display: inline-flex;
+    justify-content: space-around;
+    color: var(--second-text-color);
 }
 
-li {
-    padding: 2rem;
-    font-size: 20px;
+nav li {
+    padding: 1rem;
 }
 
 .button {
@@ -84,8 +88,8 @@ li {
 
 .form {
     position: relative;
-    padding-bottom: 5rem;
-    width: 60%;
+    padding: 30px;
+    width: 70%;
     margin: auto;
 }
 
@@ -97,7 +101,7 @@ li {
     padding-bottom: 0.5rem;
 }
 
-input, textarea {
+input, textarea, select {
     background-color: var(--second-color);
     color: var(--second-text-color);
     width: 100%;
