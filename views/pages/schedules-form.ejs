@@ -1,9 +1,14 @@
 
 <div class="form">
-    <form method="POST" action="./pages/schedules">
+    <form method="POST" action="/new">
         <div>
             <label for="username">Nom</label>
             <input name="username" id="username" type="text" required>
+        </div>
+
+        <div>
+            <label for="user_id">User id:</label>
+            <input name="user_id" id="user_id" type="number" required>
         </div>
         <div>
             <label for="day">Day:</label>
@@ -20,11 +25,11 @@
         </div>
         <div>
             <label for="start">Début:</label>
-            <input name="start" id="start" type="time" required>
+            <input name="start_at" id="start" type="time" required>
         </div>
         <div>
             <label for="end">Finir:</label>
-            <input name="end" id="end" type="time" required>
+            <input name="end_at" id="end" type="time" required>
         </div>
         <button class="button">Envoyer</button>
     </form>

@@ -24,6 +24,7 @@ main {
     margin: 0 10% 0 10%;
 
 }
+
 p {
     color: var(--text-color);
     padding: 10px;
@@ -51,7 +52,14 @@ nav {
 
 .container img {
     height: 200px;
-    padding: 20px 0;
+    padding: 3rem;
+}
+
+.links {
+    color: var(--second-text-color);
+    text-decoration: none;
+    padding: 2.5rem;
+
 }
 
 nav ul {
@@ -59,11 +67,7 @@ nav ul {
     list-style: none;
     display: inline-flex;
     justify-content: space-around;
-    color: var(--second-text-color);
-}
-
-nav li {
-    padding: 1rem;
+    padding: 20px;
 }
 
 .button {
@@ -85,6 +89,27 @@ nav li {
     margin-right: auto;
 }
 
+.schedules {
+    color: var(--text-color);
+    list-style: none;
+}
+
+th {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+td {
+    font-weight: bolder;
+    color: var(--text-color);
+    list-style: none;
+    padding-right: 2rem;
+}
+
+a {
+    color: var(--text-color);
+
+}
 
 .form {
     position: relative;

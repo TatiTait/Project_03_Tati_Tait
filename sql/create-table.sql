@@ -1,6 +1,8 @@
+DROP TABLE IF EXISTS schedules;
 
 CREATE TABLE schedules (
-    user_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
     username VARCHAR(100) NOT NULL,
     day SMALLINT NOT NULL,
     start_at TIME NOT NULL,

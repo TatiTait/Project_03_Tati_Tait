@@ -5,7 +5,7 @@ const expressLayouts = require('express-ejs-layouts')
 //const db = require('./database')
 const pgp = require('pg-promise')();
 const cn = 'postgres://postgres:070517@localhost:5432/mr_coffee';
-
+const scheduleRouter = require('./routes/routes')
 
 // body parser 
 
@@ -23,7 +23,8 @@ app.set("layout","layouts/layout.ejs")
 app.use(express.static('public'))
 
 // set up routes
-app.use("", require("./routes/routes"))
+//app.use("", require("./routes/routes"))
+app.use('/', scheduleRouter)
 
 
 app.listen(PORT, () => {

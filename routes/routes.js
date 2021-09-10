@@ -25,9 +25,15 @@ router.get("/new", (req, res) => {
 })
 
 router.post("/new", (req, res) => {
-    db.none('INSERT INTO schedules (username, day, start_at, end_at) VALUES($1, $2, $3, $4)',
-    [username, day, start_at, end_at]);
-    res.redirect("./pages/schedules");
+    db.none('INSERT INTO schedules (user_id, username, day, start_at, end_at) VALUES ($1, $2, $3, $4, $5);',
+    [req.body.user_id, req.body.username, req.body.day, req.body.start_at, req.body.end_at])
+    .then(()=>{
+        res.redirect("/");
     })
+    .catch((err)=>{
+        console.log(err);
+        res.send(err)
+    })
+  })
 
 module.exports = router
